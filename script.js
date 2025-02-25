@@ -16,12 +16,12 @@
     const getRandomNumber = (argMin, argMax) => {
       const min = Math.ceil(argMin);
       const max = Math.floor(argMax);
-      return Math. floor(Math.random() * (max-min) + min);
+      return Math.floor(Math.random() * (max-min) + min);
     }
 
-    const playomikuji = () => {
+    const playOmikuji = () => {
         const slotAnimationTimer = setInterval(() => {
-          const randomkey = getRandomNumber(0,6);
+          const randomKey = getRandomNumber(0,6);
           $result.setAttribute("src", omikujiArray[randomKey]);
         },SLOT_TIME);
         
@@ -32,5 +32,5 @@
         }, DURATION);
     };
 
-    document.getElementById("js-button").addEventListener("click",playomikuji);
+    document.getElementById("js-button").addEventListener("click",playOmikuji);
     })();
